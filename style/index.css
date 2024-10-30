@@ -1,0 +1,29 @@
+/* 
+! ----------------------------------------------------------------------------
+!                             Page index.html 
+! ----------------------------------------------------------------------------
+*/
+/* TODO Mettre en forme les divExplorer pour qu'ils ressemblent à ce qui était prévu */
+
+/*Conteneur flex*/
+#divExploration {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+
+/*Menu de la page d'accueil : éléments flex, couleur de fond bleu,
+coins arrondis, largeur minimum = taille du contenu (pour éviter les débordements)*/
+.divExplorer {
+    background-color: #567bca;
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-width: fit-content; 
+    
+    width: 14vw;
+}
+
+.divExplorer a {
+    text-decoration: none;
+    color: white;
+}

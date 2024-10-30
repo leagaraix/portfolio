@@ -24,6 +24,9 @@ main {
 /*Un texte mis en gras est aussi coloré en bleu*/
 b {
     color: #567bca;
+    background-color: rgba(255, 255, 255, 0.867);
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 /*Un titre h2 est aussi coloré en bleu*/
