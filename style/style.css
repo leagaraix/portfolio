@@ -29,9 +29,24 @@ b {
     padding-right: 4px;
 }
 
-/*Un titre h2 est aussi coloré en bleu*/
+/*Couleur bleue, suppression de la marge supérieure (déjà gérée avec le main)*/
+h1 {
+    color: #567bca;
+    margin-top: 0px;
+}
+
+/*Couleur bleue*/
 h2 {
     color: #567bca;
+}
+
+/*Suppression de la marge supérieur (déjà gérée dans les div)*/
+h3 {
+    margin: 0px;
+}
+
+.lieu {
+    font-style: italic;
 }
 
 

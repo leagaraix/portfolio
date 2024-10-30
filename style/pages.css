@@ -27,3 +27,66 @@ coins arrondis, largeur minimum = taille du contenu (pour éviter les débordeme
     text-decoration: none;
     color: white;
 }
+
+
+/* 
+! ----------------------------------------------------------------------------
+!                           Page projets.html 
+! ----------------------------------------------------------------------------
+*/
+/* TODO Adapter les projets aux petits écrans */
+
+/*Rassemblement des projets :
+conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en largeur,
+*/
+#projets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh 5vw;
+    justify-content: space-around;
+}
+
+/*Cadre pour la présentation d'un projet :
+conteneur flex, disposition en colonnes, espace entre les éléments,
+couleur bleue transparente à 50%, padding, coins arrondis,
+gestion de l'affichage en fonction de la taille de la fenêtre*/
+.projet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(86, 123, 202, 0.5); /*Le rgba permet de ne pas transmettre la transparence aux enfants de la div (contrairement à l'attribut opacity)*/
+    padding: 30px;
+    border-radius: 10px;
+
+    /*Gestion de la largeur :*/
+    flex: 1 1 300px; /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
+    max-width: 60%; /*Limite la largeur des éléments*/ /* ! Il faudrait changer cette valeur pour les petits écrans */
+    
+    /*Gestion de la hauteur :*/
+    max-height: 400px; /* Limite la hauteur */ /* ! A voir si c'est la meilleure manière de faire */
+
+    /*Autres paramètres d'affichage :*/
+    box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
+    overflow: hidden; /* Cache les débordement horizontales, plus propre en cas de problème*/
+    text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
+}
+
+/*Regroupement des outils utilisés pendant un projet :
+conteneur flex, retour à la ligne, espacement de 10px entre chaque outil*/
+.outils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+/*Nom d'un outil : 
+couleur de fond bleue, suppression des marges top et bottom des paragraphes*/
+.outil {
+    background-color: #567bca;
+    margin: 0px;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+
