@@ -1,10 +1,82 @@
-/* * Mise en page * */
+/* 
+! ----------------------------------------------------------------------------
+!                            Mise en page globale 
+! ----------------------------------------------------------------------------
+*/
 
-/*Polices monospaces, aucune marge*/
+/*Fond noir, aucune marge, texte blanc par défaut, polices monospaces,
+taille du texte assez grande pour une bonne lisibilité*/
 body {
     background-color: black;
+    margin: 0px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0px;
-    font-size: 1rem;
+    font-size:large;
+    line-height: 1.5;
+}
+
+/*Marges top et down = 8% de la hauteur d'affichage,
+marges left et right = 8% de la largeur d'affichage*/
+main {
+    margin: 8vh 8vw;
+}
+
+/*Un texte mis en gras est aussi coloré en bleu*/
+b {
+    color: #567bca;
+}
+
+/*Un titre h2 est aussi coloré en bleu*/
+h2 {
+    color: #567bca;
+}
+
+
+/* 
+! ----------------------------------------------------------------------------
+!               Bulles pour la signification des abbréviations 
+! ----------------------------------------------------------------------------
+*/
+
+/*Style global d'un élément span .abbreviations :
+position relative pour pouvoir utiliser la position absolue,
+souris prend une forme de pointeur, texte souligné*/
+.abbreviations {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline dotted;
+}
+
+/*Style de la bulle :*/
+.abbreviations::before {
+
+     /*Récupère le texte enregistré dans l'attribut data-tooltip*/
+    content: attr(data-tooltip);
+
+    /*Position de la bulle : au-dessus du texte et centrée*/
+    position: absolute;
+    bottom: 100%; /*Au-dessus de l'abbréviation*/
+    left: 50%; /*Place le coin gauche de la bulle à 50% de la largeur de son parent*/
+    transform: translateX(-50%); /*Déplace l'élément vers la gauche de 50% de sa propre largeur*/
+
+    /*Style de la bulle : fond noir, bordure blanche,
+    coins arrondis, pas de retour à la ligne*/
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    font-size: 0.875rem; /*Police plus petite que le reste du texte*/
+    
+    /*Paramètres d'affichage :*/
+    opacity: 0;
+    transition: opacity 0.3s ease; /*Rend l'affichage pluis fluide*/
+    visibility: hidden; /*La bulle est invisible tant qu'elle n'est pas survolée*/
+    z-index: 10; /*Ordre d'affichage des éléments : l'élément avec le plus haut z-index s'affiche par-dessus les autres*/
+}
+
+/*Affichage de la bulle au survol :*/
+.abbreviations:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
