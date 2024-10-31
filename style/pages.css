@@ -5,22 +5,32 @@
 */
 /* TODO Mettre en forme les divExplorer pour qu'ils ressemblent à ce qui était prévu */
 
-/*Conteneur flex*/
+/*Conteneur flex, espacement de 5% de la largeur de la fenêtre,
+contenu touche les côtés gauche et droit et prend la place restante*/
 #divExploration {
     display: flex;
     flex-wrap: wrap;
     gap: 5vw;
+    justify-content: space-around;
 }
 
-/*Menu de la page d'accueil : éléments flex, couleur de fond bleu,
-coins arrondis, largeur minimum = taille du contenu (pour éviter les débordements)*/
+/*Eléments flex, tout est centré, couleur de fond bleu, coins arrondis, 
+padding, taille uniforme*/
 .divExplorer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
     background-color: #567bca;
     border-radius: 5px;
     padding: 5px 10px;
-    min-width: fit-content; 
     
-    width: 14vw;
+    flex: 1 1 150px; /*Largeur de 150px, ajustable*/
+    min-height: 80px; /*Pas de réduction en-dessous de cette hauteur*/
+    max-width: 200px; /*Limite la taille si l'espace est grand*/
+    box-sizing: border-box;
+    
 }
 
 .divExplorer a {
