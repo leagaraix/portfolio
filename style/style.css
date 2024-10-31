@@ -188,3 +188,38 @@ souris prend une forme de pointeur, texte souligné*/
     opacity: 1;
     visibility: visible;
 }
+
+
+/* 
+! ----------------------------------------------------------------------------
+!             Sélection automatique de la couleur d'un outil 
+! ----------------------------------------------------------------------------
+*/
+
+/*Regroupement des outils utilisés pendant un projet :
+conteneur flex, retour à la ligne, espacement de 10px entre chaque outil*/
+.outils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+
+/*Affichage d'un outil : suppression des marges top et bottom des paragraphes,
+ajout du padding de 5px top et bottom, padding de 10px sur les côtés,
+coins très arrondis*/
+.outils p {
+    margin: 0px;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.outil-html {
+    background-color: ;
+}
+
+
+
+
+

@@ -5,12 +5,14 @@
 */
 
 /*Conteneur flex, espacement de 5% de la largeur de la fenêtre,
-contenu touche les côtés gauche et droit et prend la place restante*/
+contenu touche les côtés gauche et droit et prend la place restante,
+marge top pour l'espacer de la div précédente*/
 #divExploration {
     display: flex;
     flex-wrap: wrap;
     gap: 5vw;
     justify-content: space-around;
+    margin-top: 8vh;
 }
 
 /*Eléments flex, tout est centré, couleur de fond bleu, coins arrondis, 
@@ -78,24 +80,6 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
     box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
     overflow: hidden; /* Cache les débordement horizontales, plus propre en cas de problème*/
     text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
-}
-
-/*Regroupement des outils utilisés pendant un projet :
-conteneur flex, retour à la ligne, espacement de 10px entre chaque outil*/
-.outils {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
-
-/*Nom d'un outil : 
-couleur de fond bleue, suppression des marges top et bottom des paragraphes*/
-.outil {
-    background-color: #567bca;
-    margin: 0px;
-    padding: 5px 10px;
-    border-radius: 25px;
 }
 
 
