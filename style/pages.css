@@ -3,7 +3,6 @@
 !                             Page index.html 
 ! ----------------------------------------------------------------------------
 */
-/* TODO Mettre en forme les divExplorer pour qu'ils ressemblent à ce qui était prévu */
 
 /*Conteneur flex, espacement de 5% de la largeur de la fenêtre,
 contenu touche les côtés gauche et droit et prend la place restante*/
@@ -100,3 +99,72 @@ couleur de fond bleue, suppression des marges top et bottom des paragraphes*/
 }
 
 
+/* 
+! ----------------------------------------------------------------------------
+!                      Page experiences-et-formations.html 
+! ----------------------------------------------------------------------------
+*/
+
+/*Affichage de la bordure gauche du tableau*/
+table {
+    border-left: 2px solid #567bca;
+}
+
+/*Le contenu des cellules se place en haut des cellules*/
+td {
+    vertical-align: top;
+}
+
+/*Cellules date : affichage de la date en bleu, en gras, padding de 10px 
+(sauf à droite, 20px), largeur minimale*/
+.date {
+    color: #567bca;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Redéfinition du style des h2 pour la page*/
+.exp {
+    color: white;
+}
+
+td p {
+    margin-top: 0px;
+}
+
+
+
+/* 
+! ----------------------------------------------------------------------------
+!                           Page competences.html 
+! ----------------------------------------------------------------------------
+*/
+
+/*Rassemblement des projets :
+conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en largeur,
+*/
+#competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh 5vw;
+    justify-content: space-around;
+}
+
+/*Affichage d'une competence*/
+.competence {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /*Gestion de la largeur :*/
+    flex: 1 1 400px; /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
+    
+    /*Gestion de la hauteur :*/
+    max-height: 400px; /* Limite la hauteur */
+
+    /*Autres paramètres d'affichage :*/
+    box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
+    overflow: hidden; /* Cache les débordement horizontales, plus propre en cas de problème*/
+}
