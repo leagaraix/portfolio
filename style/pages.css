@@ -45,7 +45,8 @@ padding, taille uniforme*/
 !                           Page projets.html 
 ! ----------------------------------------------------------------------------
 */
-/* TODO Adapter les projets aux petits écrans */
+/* TODO Adapter les projets aux petits écrans
+TODO Les espaces entre les éléments devraient rester les mêmes*/
 
 /*Rassemblement des projets :
 conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en largeur,
@@ -74,13 +75,26 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
     max-width: 60%; /*Limite la largeur des éléments*/ /* ! Il faudrait changer cette valeur pour les petits écrans */
     
     /*Gestion de la hauteur :*/
-    max-height: 400px; /* Limite la hauteur */ /* ! A voir si c'est la meilleure manière de faire */
+    max-height: fit-content; /* Limite la hauteur */ /* ! A voir si c'est la meilleure manière de faire --> j'ai changé, c'était 400px, mais du coup le contenu n'était pas entièrement affiché, là c'est mieux*/
 
     /*Autres paramètres d'affichage :*/
     box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
-    overflow: hidden; /* Cache les débordement horizontales, plus propre en cas de problème*/
     text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
 }
+
+/* ! Changement pour les h3 des projets : couleur de fond, padding, texte centré...*/
+.projet h3 {
+    background-color: #567bca;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.resume {
+    margin-bottom: 0px;
+}
+
 
 
 /* 

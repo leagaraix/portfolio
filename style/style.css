@@ -53,8 +53,10 @@ h3 {
 
 /*Nom d'un lieu (pour les expériences, les formations, les projets :
 en italique*/
+/* ! Tests de couleurs, à commenter : plus petit*/
 .lieu {
     font-style: italic;
+    font-size: smaller;
 }
 
 /*Un titre à gauche, une image à droite, marge top de 5% de la hauteur*/
@@ -146,17 +148,17 @@ header li a:hover {
 ! ----------------------------------------------------------------------------
 */
 
-/*Style global d'un élément span .abbreviations :
+/*Style global d'un élément span .abreviations :
 position relative pour pouvoir utiliser la position absolue,
 souris prend une forme de pointeur, texte souligné*/
-.abbreviations {
+.abreviations {
     position: relative;
-    cursor: pointer;
+    cursor: help;
     text-decoration: underline dotted;
 }
 
 /*Style de la bulle :*/
-.abbreviations::before {
+.abreviations::before {
 
      /*Récupère le texte enregistré dans l'attribut data-tooltip*/
     content: attr(data-tooltip);
@@ -184,7 +186,7 @@ souris prend une forme de pointeur, texte souligné*/
 }
 
 /*Affichage de la bulle au survol :*/
-.abbreviations:hover::before {
+.abreviations:hover::before {
     opacity: 1;
     visibility: visible;
 }
@@ -209,17 +211,33 @@ conteneur flex, retour à la ligne, espacement de 10px entre chaque outil*/
 /*Affichage d'un outil : suppression des marges top et bottom des paragraphes,
 ajout du padding de 5px top et bottom, padding de 10px sur les côtés,
 coins très arrondis*/
+/* ! Pas encore commenté : couleur du texte = noire, texte en gras*/
 .outils p {
     margin: 0px;
     padding: 5px 10px;
     border-radius: 25px;
+    color: #000000;
+    font-weight: bold;
 }
 
-.outil-html {
-    background-color: ;
-}
+/*Définition d'une couleur de fond pour chaque outil :*/
+.outil-bash { background-color: #3bb249; }
+.outil-cpp { background-color: #004482; }
+.outil-css { background-color: #29a5d1; }
+.outil-debian { background-color: #a80030; }
+.outil-git { background-color: #f05030; }
+.outil-google-tests {background-color: #0f9d58;}
+.outil-html { background-color: #ff7816; }
+.outil-java { background-color: #e84135; }
+.outil-js { background-color: #ffdf00; }
+.outil-linux { background-color: #000000; }
+.outil-php { background-color: #777bb3; }
+.outil-postgresql { background-color: #306192; }
+.outil-r { background-color: #4e9bb9; }
+.outil-sql { background-color: #aac7c8; }
+.outil-uml { background-color: #452e7f; }
 
-
-
-
+/* Parce que c'était amusant à tester :
+.outil-google-tests { background: linear-gradient(0.25turn, #cf2d48, #fbbd00, #0f9d58, #3c79e6); }
+*/
 
