@@ -104,8 +104,9 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 */
 
 /*Affichage de la bordure gauche du tableau*/
-table {
+table{
     border-left: 2px solid #567bca;
+    border-spacing: 0 20px;
 }
 
 /*Le contenu des cellules se place en haut des cellules*/
@@ -128,10 +129,10 @@ td {
     color: white;
 }
 
+/*Suppression des marges inutiles dans les <p> des cellules*/
 td p {
     margin-top: 0px;
 }
-
 
 
 /* 

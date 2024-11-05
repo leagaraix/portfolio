@@ -29,6 +29,11 @@ b {
     padding-right: 4px;
 }
 
+/*<p> mais bleu*/
+.p-bleu {
+    color: #567bca;
+}
+
 /*Couleur bleue, suppression de la marge supérieure (déjà gérée avec le main)*/
 h1 {
     color: #567bca;
@@ -51,6 +56,26 @@ h3 {
     margin: 0px;
 }
 
+/*Un titre à gauche, une image à droite*/
+/* ! marge top de 5% de la hauteur --> retirée car pas pratique sur les expériences --> ajouter un gap pour le à propos*/
+/*Format HTML : 
+<div class="titre-image">
+    <h.></h.>
+    <img src="" alt="">
+</div>
+*/
+.titre-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Taille des images dans les titre-image, padding de 50px pour éviter qu'elles soient coller au texte*/
+.titre-image img {
+    width: 30px;
+    height: fit-content;
+    padding-left: 50px;
+}
+
 /*Nom d'un lieu (pour les expériences, les formations, les projets :
 en italique*/
 /* ! Tests de couleurs, à commenter : plus petit*/
@@ -59,17 +84,19 @@ en italique*/
     font-size: smaller;
 }
 
-/*Un titre à gauche, une image à droite, marge top de 5% de la hauteur*/
-.titre-image {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5vh;
+/*Mise en forme du bouton pour afficher une pièce jointe*/
+.piece-jointe {
+    padding: 7px 15px;
+    background-color: white;
+    border-radius: 15px;
+    border: solid #567bca 1px;
+    margin-top: 5px;
+    width: fit-content;
 }
-
-/*Taille des images dans les titre-image*/
-.titre-image img {
-    width: 30px;
-    height: fit-content;
+.piece-jointe a {
+    text-decoration: underline dotted;
+    font-weight: bold;
+    color: #567bca;
 }
 
 
