@@ -40,11 +40,6 @@ h1 {
     margin-top: 0px;
 }
 
-/*Ajout d'une marge top similaire à celle du main sur les h1 (sauf le premier)*/
-h1:not(:first-child) {
-    margin-top: 8vh;
-}
-
 /*Couleur bleue, suppression des marges inutiles*/
 h2 {
     color: #567bca;
@@ -54,6 +49,21 @@ h2 {
 /*Suppression de la marge supérieur (déjà gérée dans les div)*/
 h3 {
     margin: 0px;
+}
+
+/*Affichage en bloc pour que le lien prenne tout l'espace disponible dans le h3
+(donc plus grande zone cliquable), suppression du souligné, couleur blanche*/
+h3 a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+/*Affichage des liens servant à revenir aux pages précédentes :*/
+.fil-arianne {
+    text-decoration: none;
+    font-size: smaller;
+    color: white;
 }
 
 /*Un titre à gauche, une image à droite*/
@@ -97,6 +107,11 @@ en italique*/
     text-decoration: underline dotted;
     font-weight: bold;
     color: #567bca;
+}
+
+/*Ajout d'une marge top similaire à celle du main sur les h1 (sauf le premier)*/
+.add-margin {
+    margin-top: 8vh;    
 }
 
 

@@ -26,6 +26,7 @@ padding, taille uniforme*/
     background-color: #567bca;
     border-radius: 5px;
     padding: 5px 10px;
+    font-weight: bold;
     
     flex: 1 1 150px; /*Largeur de 150px, ajustable*/
     min-height: 80px; /*Pas de réduction en-dessous de cette hauteur*/
@@ -86,15 +87,60 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 .projet h3 {
     background-color: #567bca;
     border-radius: 10px;
-    padding: 5px;
     text-align: center;
     font-weight: bolder;
+}
+
+.projet h3 a {
+    padding: 5px;
+}
+
+.projet h3 a:hover {
+    border-radius: 10px;
+    background-color: black;
 }
 
 .resume {
     margin-bottom: 0px;
 }
 
+
+/* 
+! ----------------------------------------------------------------------------
+!                                Pages projets 
+! ----------------------------------------------------------------------------
+*/
+
+/*Gérer le positionnement du corps et du bloc compétences dans les
+pages projet, espacement de 10% de la largeur entre les div*/
+.page-projet {
+    display: flex;
+    gap: 10%;
+}
+
+.aside-competences {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #567bca;
+
+    padding: 30px;
+    border-radius: 10px;
+
+    /* ! A voir si je garde la suite, c'est du copier-coller des projets pour l'instant*/
+
+    /*Gestion de la largeur :*/
+    flex: 1 1 300px; /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
+    max-width: 60%; /*Limite la largeur des éléments*/ /* ! Il faudrait changer cette valeur pour les petits écrans */
+    
+    /*Gestion de la hauteur :*/
+    max-height: fit-content; /* Limite la hauteur */ /* ! A voir si c'est la meilleure manière de faire --> j'ai changé, c'était 400px, mais du coup le contenu n'était pas entièrement affiché, là c'est mieux*/
+
+    /*Autres paramètres d'affichage :*/
+    box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
+    text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
+
+}
 
 
 /* 
