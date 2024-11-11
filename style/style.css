@@ -4,6 +4,8 @@
 ! ----------------------------------------------------------------------------
 */
 
+/* TODO Réfléchir à la police : mettre la stylée uniquement sur les titres et le menu, rester sur une normale autre part car plus lisible */
+
 /*Fond noir, aucune marge, texte blanc par défaut, polices monospaces,
 taille du texte assez grande pour une bonne lisibilité*/
 body {
@@ -15,9 +17,14 @@ body {
     line-height: 1.5;
 }
 
-/*Marges top et down = 8% de la hauteur d'affichage,
+/*Conteneur flex, tous les éléments sont en colonnes et centrés
+(cela permet notamment aux images d'être bien placées dans les projets),
+marges top et down = 8% de la hauteur d'affichage,
 marges left et right = 8% de la largeur d'affichage*/
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 8vh 8vw;
 }
 
@@ -32,6 +39,15 @@ b {
 /*<p> mais bleu*/
 .p-bleu {
     color: #567bca;
+}
+
+/*Les liens s'affichent par défaut en blanc souligné,*/
+a {
+    color: white;
+}
+a:hover {
+    color: #567bca;
+    text-decoration: none;
 }
 
 /*Couleur bleue, suppression de la marge supérieure (déjà gérée avec le main)*/
@@ -66,6 +82,20 @@ h3 a {
     color: white;
 }
 
+/*Les images (notamment celles placées dans le main, pour les projets)
+font 70% de la largeur du main*/
+img {
+    max-width: 70%;
+}
+
+/*Marge top de 50px*/
+.legende-image {
+    margin-top: 50px;
+    font-weight: bold;
+    background-color: #567bca;
+    padding: 2px 10px;
+}
+
 /*Un titre à gauche, une image à droite*/
 /* ! marge top de 5% de la hauteur --> retirée car pas pratique sur les expériences --> ajouter un gap pour le à propos*/
 /*Format HTML : 
@@ -94,19 +124,33 @@ en italique*/
     font-size: smaller;
 }
 
-/*Mise en forme du bouton pour afficher une pièce jointe*/
+/*Mise en forme du bouton pour afficher une pièce jointe :
+margin top et bottom pour laisser de l'espace autour, suppression du padding inutile
+(géré par l'élément a en display block), largeur s'adapte au contenu, fond blanc, 
+coins arrondis, bordure bleue*/
 .piece-jointe {
-    padding: 7px 15px;
+    margin-bottom: 18px;
+    margin-top: 5px;
+    padding: 0px;
+    width: fit-content;
     background-color: white;
     border-radius: 15px;
     border: solid #567bca 1px;
-    margin-top: 5px;
-    width: fit-content;
 }
+/*Le lien dans le bouton prend toute la place disponible et agrandit l'objet avec son
+padding, coins arrondis, souligné avec des petits points, police en gras, couleur bleue*/
 .piece-jointe a {
+    display: block;
+    padding: 7px 15px;
+    border-radius: 15px;
     text-decoration: underline dotted;
     font-weight: bold;
     color: #567bca;
+}
+/*Quand il est survolé, le lien devient blanc sur fond bleu*/
+.piece-jointe a:hover {
+    color: white;
+    background-color: #567bca;
 }
 
 /*Ajout d'une marge top similaire à celle du main sur les h1 (sauf le premier)*/
@@ -273,11 +317,13 @@ coins très arrondis*/
 .outil-java { background-color: #e84135; }
 .outil-js { background-color: #ffdf00; }
 .outil-linux { background-color: #000000; }
+.outil-maquette { background-color: #ffb6c1; }
 .outil-php { background-color: #777bb3; }
 .outil-postgresql { background-color: #306192; }
 .outil-r { background-color: #4e9bb9; }
 .outil-sql { background-color: #aac7c8; }
 .outil-uml { background-color: #452e7f; }
+.outil-wordpress { background-color: #3053e8; }
 
 /* Parce que c'était amusant à tester :
 .outil-google-tests { background: linear-gradient(0.25turn, #cf2d48, #fbbd00, #0f9d58, #3c79e6); }

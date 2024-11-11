@@ -118,6 +118,7 @@ pages projet, espacement de 10% de la largeur entre les div*/
     gap: 10%;
 }
 
+/* TODO La hauteur de l'aside doit se limiter à son contenu, sinon c'est pas beau */
 .aside-competences {
     display: flex;
     flex-direction: column;
@@ -130,7 +131,7 @@ pages projet, espacement de 10% de la largeur entre les div*/
     /* ! A voir si je garde la suite, c'est du copier-coller des projets pour l'instant*/
 
     /*Gestion de la largeur :*/
-    flex: 1 1 300px; /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
+    /* flex: 1 1 300px;*/ /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
     max-width: 60%; /*Limite la largeur des éléments*/ /* ! Il faudrait changer cette valeur pour les petits écrans */
     
     /*Gestion de la hauteur :*/
