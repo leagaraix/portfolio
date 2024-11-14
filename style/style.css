@@ -77,9 +77,9 @@ h3 a {
 
 /*Affichage des liens servant à revenir aux pages précédentes :*/
 .fil-arianne {
-    text-decoration: none;
+    text-decoration: underline dotted;
     font-size: smaller;
-    color: white;
+    color: #567bca;
 }
 
 /*Les images (notamment celles placées dans le main, pour les projets)
