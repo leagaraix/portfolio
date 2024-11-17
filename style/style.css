@@ -124,31 +124,27 @@ en italique*/
     font-size: smaller;
 }
 
-/*Mise en forme du bouton pour afficher une pièce jointe :
-margin top et bottom pour laisser de l'espace autour, suppression du padding inutile
-(géré par l'élément a en display block), largeur s'adapte au contenu, fond blanc, 
-coins arrondis, bordure bleue*/
+/* Mise en forme du bouton pour afficher une pièce jointe :
+margin top et bottom pour laisser de l'espace autour, ajout d'un padding pour élargir l'élément,
+bordure bleue, coins arrondis, fond blanc,
+texte bleu, souligné avec des points, en gras et de taille moyenne*/
 .piece-jointe {
-    margin-bottom: 18px;
+    display: inline-block;
+
+    margin-bottom: 25px;
     margin-top: 5px;
-    padding: 0px;
-    width: fit-content;
-    background-color: white;
+    padding: 7px 15px;
+
     border-radius: 15px;
     border: solid #567bca 1px;
-}
-/*Le lien dans le bouton prend toute la place disponible et agrandit l'objet avec son
-padding, coins arrondis, souligné avec des petits points, police en gras, couleur bleue*/
-.piece-jointe a {
-    display: block;
-    padding: 7px 15px;
-    border-radius: 15px;
+    background-color: white;
+    
+    color: #567bca;
     text-decoration: underline dotted;
     font-weight: bold;
-    color: #567bca;
+    font-size: medium;
 }
-/*Quand il est survolé, le lien devient blanc sur fond bleu*/
-.piece-jointe a:hover {
+.piece-jointe:hover {
     color: white;
     background-color: #567bca;
 }
