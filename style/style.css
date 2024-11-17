@@ -9,7 +9,7 @@
 /*Fond noir, aucune marge, texte blanc par défaut, polices monospaces,
 taille du texte assez grande pour une bonne lisibilité*/
 body {
-    background-color: black;
+    background-color: rgb(15, 15, 15);
     margin: 0px;
     color: white;
     font-family: 'Courier New', Courier, monospace;

@@ -15,29 +15,37 @@ marge top pour l'espacer de la div précédente*/
     margin-top: 8vh;
 }
 
-/*Eléments flex, tout est centré, couleur de fond bleu, coins arrondis, 
-padding, taille uniforme*/
+/*Eléments flex + conteneur flex, tout est centré, couleur de fond bleu, coins arrondis,
+texte en gras, taille uniforme*/
 .divExplorer {
     display:flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    
+
     background-color: #567bca;
-    border-radius: 5px;
-    padding: 5px 10px;
+    border-radius: 10px;
     font-weight: bold;
     
     flex: 1 1 150px; /*Largeur de 150px, ajustable*/
-    min-height: 80px; /*Pas de réduction en-dessous de cette hauteur*/
     max-width: 200px; /*Limite la taille si l'espace est grand*/
-    box-sizing: border-box;
-    
+
 }
 
+/*Elément flex, padding, texte blanc, fond devient bleu foncé quand survolé*/
 .divExplorer a {
+    flex-grow: 1; /*Largeur prend toute la place disponible*/
+    min-height: 90px; /*Pas de réduction en-dessous de cette hauteur*/
+    box-sizing: border-box;
+
+    padding: 15px 10px;
     text-decoration: none;
     color: white;
+  
+}
+.divExplorer a:hover {
+    border-radius: 10px;
+    background-color: #132345;
 }
 
 
@@ -46,8 +54,7 @@ padding, taille uniforme*/
 !                           Page projets.html 
 ! ----------------------------------------------------------------------------
 */
-/* TODO Adapter les projets aux petits écrans
-TODO Les espaces entre les éléments devraient rester les mêmes*/
+/* TODO Adapter les projets aux petits écrans*/
 
 /*Rassemblement des projets :
 conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en largeur,
@@ -66,7 +73,7 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 .projet {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
     background-color: rgba(86, 123, 202, 0.5); /*Le rgba permet de ne pas transmettre la transparence aux enfants de la div (contrairement à l'attribut opacity)*/
     padding: 30px;
     border-radius: 10px;
@@ -83,7 +90,7 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
     text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
 }
 
-/* ! Changement pour les h3 des projets : couleur de fond, padding, texte centré...*/
+/*Couleur de fond bleue, coins arrondis, texte centré et en gras*/
 .projet h3 {
     background-color: #567bca;
     border-radius: 10px;
@@ -94,10 +101,10 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 .projet h3 a {
     padding: 5px;
 }
-
 .projet h3 a:hover {
     border-radius: 10px;
-    background-color: black;
+    background-color: #132345;
+    color: white;
 }
 
 .resume {
@@ -122,27 +129,27 @@ pages projet, espacement de 10% de la largeur entre les div*/
 .aside-competences {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
     background-color: #567bca;
 
     padding: 30px;
     border-radius: 10px;
 
-    /* ! A voir si je garde la suite, c'est du copier-coller des projets pour l'instant*/
-
-    /*Gestion de la largeur :*/
-    /* flex: 1 1 300px;*/ /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
-    max-width: 60%; /*Limite la largeur des éléments*/ /* ! Il faudrait changer cette valeur pour les petits écrans */
+    min-width: 350px;
+    max-width: 40%;
     
     /*Gestion de la hauteur :*/
-    max-height: fit-content; /* Limite la hauteur */ /* ! A voir si c'est la meilleure manière de faire --> j'ai changé, c'était 400px, mais du coup le contenu n'était pas entièrement affiché, là c'est mieux*/
+    height: fit-content;
 
     /*Autres paramètres d'affichage :*/
     box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
-    text-overflow: ellipsis; /* ! Utile pour tronquer les textes longs (à voir si ça sert avec les résumés) */
 
 }
 
+/*Suppression de la marge inutile*/
+.aside-competences ul {
+    margin-top: 0px;
+}
 
 /* 
 ! ----------------------------------------------------------------------------
@@ -154,6 +161,7 @@ pages projet, espacement de 10% de la largeur entre les div*/
 table{
     border-left: 2px solid #567bca;
     border-spacing: 0 20px;
+    width: 70%;
 }
 
 /*Le contenu des cellules se place en haut des cellules*/
@@ -194,7 +202,7 @@ conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en la
 #competences {
     display: flex;
     flex-wrap: wrap;
-    gap: 5vh 5vw;
+    gap: 5vh 10vw;
     justify-content: space-around;
 }
 
@@ -202,15 +210,26 @@ conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en la
 .competence {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     /*Gestion de la largeur :*/
     flex: 1 1 400px; /*Largeur flexible : chaque div prend au moins 300px et peut s'agrandir*/
     
     /*Gestion de la hauteur :*/
-    max-height: 400px; /* Limite la hauteur */
+    max-height: 600px; /* Limite la hauteur */
 
     /*Autres paramètres d'affichage :*/
     box-sizing: border-box; /*Inclut le padding dans la largeur totale*/
     overflow: hidden; /* Cache les débordement horizontales, plus propre en cas de problème*/
+}
+
+/* 
+! ----------------------------------------------------------------------------
+!                           Page a-propos.html 
+! ----------------------------------------------------------------------------
+*/
+
+#moi {
+    width: 50%;
+    margin: auto;
+    
 }
