@@ -75,6 +75,10 @@ h3 a {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
+
 /*Affichage des liens servant à revenir aux pages précédentes :*/
 .fil-arianne {
     text-decoration: underline dotted;
@@ -169,7 +173,7 @@ polices sans-serif pour les éléments du header,
 space-between pour avoir un élément à gauche et l'autre à droite,
 centrage vertical des éléments flex,
 hauteur = 8% de la hauteur d'affichage*/
-header {
+#navbar {
     display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
@@ -200,7 +204,7 @@ nav {
 /*Conteneur flex, éléments s'affichent à partir de la droite,
 espacement entre les éléments de 5% de la largeur de l'affichage,
 suppression des marges et des paddings inutiles*/
-header ul {
+#navbar ul {
     display: flex;
     justify-content: flex-end;
     gap: 5vw;
@@ -209,24 +213,24 @@ header ul {
 }
 
 /*Eléments flex, pas de points sur la liste*/
-header li {
+#navbar li {
     list-style-type: none;
 }
 
 /*Liens du menu : suppression du souligné, couleur blanche*/
-header li a {
+#navbar li a {
     text-decoration: none;
     color: white;
     height: 8vh;
 }
-header li a:hover {
+#navbar li a:hover {
     color: #567bca;
 }
 
 
 /* 
 ! ----------------------------------------------------------------------------
-!               Bulles pour la signification des abbréviations 
+!               Bulles pour la signification des abréviations 
 ! ----------------------------------------------------------------------------
 */
 

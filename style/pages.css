@@ -12,7 +12,7 @@ marge top pour l'espacer de la div précédente*/
     flex-wrap: wrap;
     gap: 5vw;
     justify-content: space-around;
-    margin-top: 8vh;
+    margin-top: 3vh;
 }
 
 /*Eléments flex + conteneur flex, tout est centré, couleur de fond bleu, coins arrondis,
@@ -29,7 +29,6 @@ texte en gras, taille uniforme*/
     
     flex: 1 1 150px; /*Largeur de 150px, ajustable*/
     max-width: 200px; /*Limite la taille si l'espace est grand*/
-
 }
 
 /*Elément flex, padding, texte blanc, fond devient bleu foncé quand survolé*/
@@ -38,16 +37,49 @@ texte en gras, taille uniforme*/
     min-height: 90px; /*Pas de réduction en-dessous de cette hauteur*/
     box-sizing: border-box;
 
+    border-radius: 10px;
+    border: solid 1px #567bca;
+
     padding: 15px 10px;
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
-  
+
+    transition: all 0.2s ease-out;
 }
 .divExplorer a:hover {
     border-radius: 10px;
     background-color: #132345;
+    border: solid 1px white;
+
+    text-decoration: none;
 }
 
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    border: 2px solid #567bca;
+    padding: 20px;
+    margin-top: 100px;
+}
+.contact>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact>div>div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact img {
+    width: 50px;
+    height: 50px;
+}
+.contact p {
+    margin: 0px;
+}
 
 /* 
 ! ----------------------------------------------------------------------------
@@ -55,6 +87,43 @@ texte en gras, taille uniforme*/
 ! ----------------------------------------------------------------------------
 */
 /* TODO Adapter les projets aux petits écrans*/
+
+/*Barre de recherche*/
+
+#barre-recherche-projets {
+    display: flex;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+#input-recherche {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+
+    border: solid 2px #567bca;
+    border-radius: 10px 0px 0px 10px;
+}
+#input-recherche:focus {
+    outline: none;
+}
+#button-recherche {
+    height: 40px;
+    padding: 10px;
+
+    background-color: #567bca;
+    border: solid 2px #567bca;
+    border-radius: 0px 10px 10px 0px;
+
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-out;
+}
+#button-recherche:hover {
+    background-color: #132345;
+    border-left: solid 2px #132345;
+    cursor: pointer;
+}
 
 /*Rassemblement des projets :
 conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en largeur,
@@ -100,6 +169,9 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 
 .projet h3 a {
     padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #567bca;
+    transition: all 0.2s ease-out;
 }
 .projet h3 a:hover {
     border-radius: 10px;
