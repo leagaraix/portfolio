@@ -48,6 +48,7 @@ a {
 a:hover {
     color: #567bca;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 /*Couleur bleue, suppression de la marge supérieure (déjà gérée avec le main)*/

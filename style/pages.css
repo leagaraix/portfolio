@@ -41,13 +41,37 @@ texte en gras, taille uniforme*/
     padding: 15px 10px;
     text-decoration: none;
     color: white;
-  
+
+    transition: all 0.3s ease;
 }
 .divExplorer a:hover {
     border-radius: 10px;
-    background-color: #132345;
+    background-color: #34508c;
+    text-decoration: underline;
 }
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    border: 2px solid #567bca;
+    padding: 30px;
+    margin-top: 100px;
+}
+.contact>div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contact img {
+    width: 50px;
+    height: 50px;
+}
+.contact p {
+    margin: 0px;
+}
 
 /* 
 ! ----------------------------------------------------------------------------
@@ -99,12 +123,14 @@ gestion de l'affichage en fonction de la taille de la fenêtre*/
 }
 
 .projet h3 a {
-    padding: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 .projet h3 a:hover {
     border-radius: 10px;
-    background-color: #132345;
+    background-color: #34508c;
     color: white;
+    text-decoration: underline;
 }
 
 .resume {
@@ -230,6 +256,6 @@ conteneur flex, retour à la ligne, gap de 5% de l'affichage en hauteur et en la
 
 #moi {
     width: 50%;
-    margin: auto;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
